@@ -1,7 +1,8 @@
 import { gsap } from "gsap";
+import { useEffect } from "react";
 
 // Horizontal loop helper function
-function horizontalLoop(items, config) {
+export function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);
     config = config || {};
     const tl = gsap.timeline({
@@ -68,10 +69,8 @@ function horizontalLoop(items, config) {
     return tl;
 }
 
-// Marquee setup function
 export function setupMarqueeAnimation() {
     const marqueeItems = gsap.utils.toArray(".marquee h1");
-
     if (marqueeItems.length > 0) {
         return horizontalLoop(marqueeItems, {
             repeat: -1,
@@ -80,12 +79,4 @@ export function setupMarqueeAnimation() {
         });
     }
     return null;
-}
-
-// React hook version
-export function useMarqueeAnimation() {
-    useEffect(() => {
-        const animation = setupMarqueeAnimation();
-        return () => animation?.kill(); // Cleanup
-    }, []);
 }

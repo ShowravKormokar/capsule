@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap } from 'gsap';
+import { setupMarqueeAnimation } from '../../func/marquee';
+
 
 const Card = () => {
 
+    useEffect(() => {
+        const animation = setupMarqueeAnimation();
 
-    
+        // Cleanup function
+        return () => {
+            animation?.kill();
+        };
+    }, [])
+
     return (
         <div className='card'>
             <div className="card-marquee">
