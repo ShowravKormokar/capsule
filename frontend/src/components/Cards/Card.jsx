@@ -3,6 +3,14 @@ import React from 'react'
 const Card = () => {
     return (
         <div className='card'>
+            <div className="card-marquee">
+                <div className="marquee">
+                    <h1>Design Beyond Boundaries</h1>
+                    <h1>Built for Tomorrow</h1>
+                    <h1>Real Impact</h1>
+                    <h1>Digital Visions</h1>
+                </div>
+            </div>
             <div className="card-wrapper">
                 <div className="card-content">
                     <div className="card-title">

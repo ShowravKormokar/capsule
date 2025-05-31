@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Intro from "../components/Intro/Intro";
 import Cards from "../components/Cards/Cards";
+import Outro from "../components/Outro/Outro";
 
 const Root = () => {
     return (
@@ -10,6 +11,7 @@ const Root = () => {
             {/* <Navbar/> */}
             <Intro />
             <Cards />
+            <Outro />
         </div>
     );
 };

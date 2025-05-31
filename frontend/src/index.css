@@ -1,1 +1,160 @@
 @import "tailwindcss";
+
+h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+  line-height: 1.25;
+}
+
+img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.intro,
+.outro {
+  height: 100svh;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h1,
+.outro h1 {
+  width: 60%;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2svh;
+}
+
+.card-marquee {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+}
+
+.marquee h1 {
+  white-space: nowrap;
+  font-size: 10vw;
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.card {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  padding: 1.5em;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.card-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  overflow: hidden;
+}
+
+.card-img img {
+  transform: scale(2);
+}
+
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card-content .card-title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-content .card-description {
+  text-align: center;
+  width: 40%;
+  margin-bottom: 3em;
+  position: relative;
+  transform: translate(40px);
+  opacity: 0;
+}
+
+.card-2 {
+  margin-top: 50vh;
+}
+
+.char {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.char span {
+  transform: translateX(100%);
+  display: inline-block;
+  will-change: transform;
+}
+
+
+/* ----------- Responsive ------------- */
+@media(max-width:900px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  .intro h1,
+  .outro h1 {
+    width: 100%;
+  }
+
+  .card-content .card-description {
+    width: 90%;
+  }
+}
