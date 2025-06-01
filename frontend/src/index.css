@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+body{
+  background-color: #0f0f0f;
+}
+
+/* Glassmorphism card effect */
+.glassEffect {
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(100%);
+  background-color: rgba(237, 240, 245, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
