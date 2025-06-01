@@ -1,23 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const Hero = () => {
   const videoRef = useRef(null);
 
   const handleLoadedMetadata = () => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 3.0; // 2x speed, increase as you like
+      videoRef.current.playbackRate = 3.0;
     }
   };
 
   return (
-    <div className='p-2'>
-      <div className="relative w-full h-screen overflow-hidden rounded-[2.5rem] p-6">
-        {/* Background Image */}
+    <div className="md:m-2">
+      <div className="relative w-full h-auto md:h-fit lg:h-screen overflow-hidden md:rounded-[2.5rem] p-4 flex flex-col justify-center">
+        {/* Background Desktop Image (hidden on small devices) */}
         <img
           src="https://capsules.moyra.co/_vercel/image?url=%2Fimages%2Fcap3.png&w=2559&q=80"
-          // src="https://capsules.moyra.co/_vercel/image?url=%2Fimages%2Fcap1.png&w=2559&q=80"
           alt="hero"
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="hidden lg:block absolute inset-0 w-full h-full object-cover z-0"
         />
 
         {/* Overlay Video */}
@@ -32,30 +31,47 @@ const Hero = () => {
           onLoadedMetadata={handleLoadedMetadata}
         ></video>
 
-        {/* Text Content */}
-        <div className="relative z-20 flex items-start justify-between h-full p-4">
+        {/* Main Content */}
+        <div className="relative z-20 flex flex-col items-center justify-start text-center space-y-6">
           <h1
-            className="text-white text-4xl md:text-6xl lg:text-9xl font-bold tracking-wider text-center"
+            className="text-white text-start text-6xl mt-10 md:text-9xl font-bold tracking-wider lg:absolute lg:bottom-44 lg:left-2"
             style={{ textShadow: '2px 2px 4px #aaa' }}
           >
             Capsules®
           </h1>
 
+          <div className='lg:absolute md:w-full md:flex md:flex-col lg:flex-row lg:justify-between lg:items-end lg:text-start lg:top-50'>
+            {/* Slogan */}
+            <h2
+              className="text-start lg:mt-0 text-white lg:text-2xl lg:font-bold tracking-wider flex flex-col gap-1"
+              style={{ textShadow: '2px 2px 4px #000' }}
+            >
+              <span>Closer to</span>
+              <span>Nature—Closer</span>
+              <span>to Yourself</span>
+            </h2>
+
+            {/* Description */}
+            <p
+              className="text-white text-sm font-normal text-start mt-12 md:text-md max-w-sm md:font-medium tracking-wide lg:text-end"
+              style={{ textShadow: '2px 2px 4px #000' }}
+            >
+              Spend unforgettable and remarkable time in the Californian desert with—Capsules.
+            </p>
+          </div>
+
         </div>
-        <div className="absolute w-full bottom-25 md:bottom-10">
-          <h2 className='flex flex-col text-4xl font-bold tracking-wider text-white' style={{ textShadow: '2px 2px 4px #aaa' }}>
-            <span>Closer to</span>
-            <span>Nature—Closer</span>
-            <span>to Yourself</span>
-          </h2>
-        </div>
-        <div className="absolute w-96 right-2 bottom-25 md:bottom-10">
-          <h2 className='flex flex-col text-sm font-bold tracking-wider text-white' style={{ textShadow: '2px 2px 4px #aaa' }}>
-            Spend unforgettable and remarkable time
-          in the Californian desert with—Capsules.
-          </h2>
+        {/* Bottom Mobile Background Image (only shown on small screens) */}
+        <div className="block lg:hidden mt-10 mb-6">
+          <img
+            src="https://capsules.moyra.co/_vercel/image?url=%2Fimages%2Fhero-mobile.png&w=2559&q=80"
+            alt="mobile bg"
+            className="w-full rounded-[2rem] object-cover shadow-[0_0_20px_rgba(255,0,0,0.15)]"
+          />
         </div>
       </div>
+
+
     </div>
   );
 };
