@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="relative w-full h-auto md:h-fit lg:h-screen overflow-hidden md:rounded-[2.5rem] p-4 flex flex-col justify-center">
         {/* Background Desktop Image (hidden on small devices) */}
         <img
-          src="https://capsules.moyra.co/_vercel/image?url=%2Fimages%2Fcap3.png&w=2559&q=80"
+          src="https://capsules.moyra.co/_ipx/q_80/images/cap1.png"
           alt="hero"
           className="hidden lg:block absolute inset-0 w-full h-full object-cover z-0"
         />
