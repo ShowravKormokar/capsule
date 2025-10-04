@@ -1,11 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import "tailwindcss";
 
 html,
 body {
@@ -25,4 +19,11 @@ body {
   -webkit-backdrop-filter: blur(5px) saturate(100%);
   background-color: rgba(237, 240, 245, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.hero-bg-img {
+  background-image: url("./assets/cap1.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  /* background-position: center; */
 }
