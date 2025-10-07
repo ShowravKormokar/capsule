@@ -9,4 +9,7 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  optimizeDeps: {
+    include: ["gsap"],
+  },
 });
