@@ -5,26 +5,22 @@ import { useGSAP } from "@gsap/react";
 const Hero = () => {
 
     useGSAP(() => {
-        // const heroTl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: ".hero-section",
-        //         start: "1% top",
-        //         end: "bottom top",
-        //         scrub: true,
-        //         // markers: true
-        //     }
-        // });
-
-        // heroTl.to(".hero-section", {
-        //     rotate: 7,
-        //     scale: 0.9,
-        //     yPercent: 30,
-        //     ease: "power1.inOut"
-        // });
+        gsap.to(".hero-section .hero-img", {
+            yPercent: 10,
+            scale: 1.1,
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: ".hero-section",
+                start: "top top",
+                end: "bottom top",
+                scrub: 1.5,
+                markers: true
+            }
+        });
     });
 
     return (
-        <section className="hero-section w-dvw h-dvh border p-2 relative">
+        <section className="hero-section w-dvw h-dvh border p-2">
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
 
                 {/* Background image (down layer) */}
