@@ -11,13 +11,13 @@ import Root from './Root/Root.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />
-  }
+    element: <Root />,
+  },
 ]);
 
 const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} basename="/capsule" />
   </React.StrictMode>
 );
