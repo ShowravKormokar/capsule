@@ -19,9 +19,12 @@ const MainLayout = () => {
     return (
         <>
             <Navbar />
-            <main>
-                <Outlet /> {/* This will render Hero, About, Contact, etc. */}
-            </main>
+            <div id="smooth-wrapper">
+                <div id="smooth-content"></div>
+                <main>
+                    <Outlet /> {/* This will render Hero, About, Contact, etc. */}
+                </main>
+            </div>
         </>
     );
 };

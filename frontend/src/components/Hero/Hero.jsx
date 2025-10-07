@@ -1,21 +1,34 @@
-import React, { useRef, useEffect } from 'react';
+import gsap from "gsap/all";
 import smoke from "../../assets/smoke_final.mp4";
+import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
-    const videoRef = useRef(null);
 
-    const handleLoadedMetadata = () => {
-        if (videoRef.current) {
-            videoRef.current.playbackRate = 3.0;
-        }
-    };
+    useGSAP(() => {
+        // const heroTl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".hero-section",
+        //         start: "1% top",
+        //         end: "bottom top",
+        //         scrub: true,
+        //         // markers: true
+        //     }
+        // });
+
+        // heroTl.to(".hero-section", {
+        //     rotate: 7,
+        //     scale: 0.9,
+        //     yPercent: 30,
+        //     ease: "power1.inOut"
+        // });
+    });
 
     return (
-        <section className="w-dvw h-dvh border p-2">
+        <section className="hero-section w-dvw h-dvh border p-2 relative">
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
 
                 {/* Background image (down layer) */}
-                <div className="absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0"></div>
+                <div className="hero-img absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0"></div>
 
                 {/* Smoke video (upper layer) */}
                 <video
