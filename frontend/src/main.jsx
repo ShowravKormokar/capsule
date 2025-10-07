@@ -10,7 +10,7 @@ import Root from './Root/Root.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/capsule/",
     element: <Root />,
   },
 ]);
