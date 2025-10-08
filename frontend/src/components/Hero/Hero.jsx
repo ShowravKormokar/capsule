@@ -46,7 +46,7 @@ const Hero = () => {
                             Capsules®
                         </h1>
 
-                        <div className="w-full h-auto absolute top-50 flex justify-between items-end">
+                        <div className="w-full h-auto absolute top-56 flex justify-between items-end">
                             <h2
                                 className="text-start lg:mt-0 text-[#f4efe7] lg:text-2xl lg:font-bold tracking-wider flex flex-col gap-1"
                                 style={{ textShadow: '2px 2px 4px #000' }}

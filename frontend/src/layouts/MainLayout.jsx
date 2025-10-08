@@ -24,6 +24,7 @@ const MainLayout = () => {
                 <div id="smooth-content">
                     <main>
                         <Outlet /> {/* Hero, About, Contact, etc. */}
+                        <div className="h-dvh border-amber-600"></div>
                     </main>
                 </div>
             </div>

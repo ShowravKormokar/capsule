@@ -3,7 +3,7 @@
 
 html,
 body {
-  background-color: #0f0f0f;
+  background-color: #181717;
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
@@ -26,4 +26,26 @@ body {
   background-repeat: no-repeat;
   object-fit: cover;
   /* background-position: center; */
+}
+
+/* --------------- Welcome Section Styles -------------- */
+
+.text-darkBrown {
+  color: #2A2725;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+.clip-text-welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #f4efe7;
+  clip-path: inset(0 0 100% 0);
+  /* start hidden from bottom */
+  white-space: nowrap;
+  transition: none;
 }
