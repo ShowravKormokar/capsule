@@ -33,7 +33,7 @@ const Hero = () => {
                     loop
                     muted
                     playsInline
-                    className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none object-center opacity-40 mix-blend-hard-light "
+                    className="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none object-center opacity-50 mix-blend-hard-light "
                 ></video>
 
                 {/* Content class=" absolute object-cover hide-in-safari object-center h-full w-full opacity-0 mix-blend-hard-light  scale-[1.75]"*/}
