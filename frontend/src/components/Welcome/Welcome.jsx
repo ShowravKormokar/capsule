@@ -10,8 +10,9 @@ const Welcome = () => {
             scrollTrigger: {
                 trigger: ".welcome-section",
                 start: "top 80%",
-                end: "bottom 20%",
+                end: "bottom 40%",
                 scrub: true,
+                // markers: true
             },
         });
 
