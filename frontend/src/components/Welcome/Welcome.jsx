@@ -25,7 +25,7 @@ const Welcome = () => {
     return (
         <div className='welcome-section my-36 mx-10 text-[#2A2725] '>
             <div className='flex flex-col gap-2 tracking-[-4] leading-2'>
-                <div className="w-[90%] text-[64px] welcome-line leading-none">
+                <div className=" text-[70px] welcome-line leading-[5px]">
                     <p className="welcome-text flex flex-col gap-[-2px]">
                         <span className="relative block text-darkBrown">
                             Welcome to a world of wild California
