@@ -1,8 +1,12 @@
 import { useGSAP } from "@gsap/react";
-import gsap, { SplitText } from "gsap/all";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap/all";
+import { useMediaQuery } from "react-responsive";
+import { welcomeLinesLG, welcomeLinesSM } from "../../constants/welcome";
 
 const Welcome = () => {
+
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const welcomeLines = isMobile ? welcomeLinesSM : welcomeLinesLG;
 
     useGSAP(() => {
         const lines = gsap.utils.toArray(".clip-text-welcome");
@@ -17,7 +21,12 @@ const Welcome = () => {
         });
 
         lines.forEach((line) => {
-            tl.to(line, { clipPath: "inset(0% 0% 0% 0%)", duration: 1, ease: "none" });
+            tl.to(line, {
+                clipPath: "inset(0% 0% 0% 0%)",
+                ease: "none",
+                stagger: 0.2,
+                duration: 1,
+            });
         });
 
     });
@@ -25,37 +34,14 @@ const Welcome = () => {
     return (
         <div className='welcome-section w-full h-dvh text-[#2A2725]'>
             <div className='flex flex-col gap-2 tracking-[-4] leading-2'>
-                <div className="w-full text-[70px] welcome-line px-7 py-20">
+                <div className="w-full md:text-[70px] text-4xl welcome-line md:px-7 px-6 md:py-20">
                     <p className="w-full welcome-text flex flex-col justify-center items-start">
-                        <span className="relative block text-darkBrown">
-                            Welcome to a world of wild California
-                            <span className="clip-text-welcome">Welcome to a world of wild California</span>
-                        </span>
-
-                        <span className="relative block text-darkBrown">
-                            desert with Capsules®, where you will
-                            <span className="clip-text-welcome">desert with Capsules®, where you will</span>
-                        </span>
-
-                        <span className="relative block text-darkBrown">
-                            discover exquisite nature observing it
-                            <span className="clip-text-welcome">discover exquisite nature observing it</span>
-                        </span>
-
-                        <span className="relative block text-darkBrown">
-                            from capsule houses, nestled in the
-                            <span className="clip-text-welcome">from capsule houses, nestled in the</span>
-                        </span>
-
-                        <span className="relative block text-darkBrown">
-                            one of the most breathtaking
-                            <span className="clip-text-welcome">one of the most breathtaking</span>
-                        </span>
-
-                        <span className="relative block text-darkBrown">
-                            destination on the United States.
-                            <span className="clip-text-welcome">destination on the United States.</span>
-                        </span>
+                        {welcomeLines.map((text, index) => (
+                            <span key={index} className="relative block text-darkBrown">
+                                {text}
+                                <span className="clip-text-welcome">{text}</span>
+                            </span>
+                        ))}
                     </p>
                 </div>
             </div>

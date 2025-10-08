@@ -36,7 +36,6 @@ body {
   display: inline-block;
   overflow: hidden;
   line-height: 1.05;
-  /* optional fine-tune */
 }
 
 .clip-text-welcome {
@@ -46,7 +45,6 @@ body {
   left: 0;
   color: #f4efe7;
   clip-path: inset(0 0 100% 0);
-  /* start hidden from bottom */
   white-space: nowrap;
   transition: none;
 }
