@@ -50,3 +50,10 @@ body {
   white-space: nowrap;
   transition: none;
 }
+
+@media (max-width: 768px) {
+  .responsive-mobile {
+    position: absolute;
+    top: 35%;
+  }
+}
