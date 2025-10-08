@@ -35,11 +35,12 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding: 0px;
-  margin: 0px;
+  line-height: 1.2;
+  /* optional fine-tune */
 }
 
 .clip-text-welcome {
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
