@@ -34,8 +34,8 @@ const Welcome = () => {
     return (
         <div className='welcome-section w-full h-dvh text-[#2A2725]'>
             <div className='flex flex-col gap-2 tracking-[-4] leading-2'>
-                <div className="w-full md:text-[70px] text-4xl welcome-line md:px-7 px-6 md:py-20">
-                    <div className="w-full welcome-text flex flex-col justify-center items-start">
+                <div className="w-full md:text-[70px] text-4xl welcome-line md:px-7 px-6 md:py-20 border border-red-600">
+                    <div className="w-full welcome-text flex flex-col justify-center items-start border border-amber-600">
                         {welcomeLines.map((text, index) => (
                             <span key={index} className="relative block text-darkBrown">
                                 {text}
