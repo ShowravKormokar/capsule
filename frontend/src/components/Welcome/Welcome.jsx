@@ -37,7 +37,7 @@ const Welcome = () => {
                 <div className="w-full md:text-[70px] text-4xl welcome-line md:px-7 px-6 md:py-20 border border-red-600">
                     <div className="w-full welcome-text flex flex-col justify-center items-start border border-amber-600">
                         {welcomeLines.map((text, index) => (
-                            <span key={index} className="relative block text-darkBrown">
+                            <span key={index} className="relative block text-darkBrown border border-red-600">
                                 {text}
                                 <span className="clip-text-welcome">{text}</span>
                             </span>

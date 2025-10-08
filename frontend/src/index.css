@@ -36,6 +36,7 @@ body {
   display: inline-block;
   overflow: hidden;
   line-height: 1.05;
+  width: 100%;
 }
 
 .clip-text-welcome {
@@ -47,6 +48,7 @@ body {
   clip-path: inset(0 0 100% 0);
   white-space: nowrap;
   transition: none;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
