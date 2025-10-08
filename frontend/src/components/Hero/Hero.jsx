@@ -10,8 +10,9 @@ const Hero = () => {
         query: "(max-width:768px)",
     });
 
-    if (!isMobHero) {
-        useGSAP(() => {
+
+    useGSAP(() => {
+        if (!isMobHero) {
             gsap.to(".hero-section .hero-img", {
                 yPercent: 10,
                 scale: 1.1,
@@ -24,11 +25,11 @@ const Hero = () => {
                     // markers: true
                 }
             });
-        });
-    }
+        };
+    }, [isMobHero]);
 
     return (
-        <section className="hero-section w-dvw h-dvh md:p-2 p-2.5 mb-20">
+        <section className="hero-section w-dvw md:h-dvh h-[100vh] md:p-2 p-2.5 mb-20">
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
                 <div className="responsive-mobile">
                     {/* Background image (down layer) */}
@@ -56,7 +57,7 @@ const Hero = () => {
                 <div className="h-full p-4 flex flex-col md:justify-center">
                     <div className="relative">
                         <h1
-                            className="text-[#f4efe7] text-start text-6xl mt-10 md:text-9xl font-bold tracking-wider lg:absolute lg:bottom-44 lg:left-2"
+                            className="text-[#f4efe7] text-start text-6xl mt-6 md:text-9xl font-bold tracking-wider lg:absolute lg:bottom-44 lg:left-2"
                             style={{ textShadow: '2px 2px 4px #aaa' }}
                         >
                             Capsules®

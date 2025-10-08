@@ -54,6 +54,6 @@ body {
 @media (max-width: 768px) {
   .responsive-mobile {
     position: absolute;
-    top: 35%;
+    top: 33%;
   }
 }
