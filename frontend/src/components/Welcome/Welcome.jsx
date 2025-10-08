@@ -13,8 +13,8 @@ const Welcome = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".welcome-section",
-                start: "top 80%",
-                end: "bottom 40%",
+                start: "top 75%",
+                end: "bottom 75%",
                 scrub: true,
                 // markers: true
             },
