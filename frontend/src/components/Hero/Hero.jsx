@@ -14,7 +14,7 @@ const Hero = () => {
                 start: "top top",
                 end: "bottom top",
                 scrub: 1.5,
-                markers: true
+                // markers: true
             }
         });
     });
