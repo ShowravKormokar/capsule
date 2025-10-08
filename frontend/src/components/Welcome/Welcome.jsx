@@ -37,9 +37,9 @@ const Welcome = () => {
                 <div className="w-full md:text-[70px] text-4xl welcome-line md:px-7 px-6 md:py-20">
                     <div className="w-full welcome-text flex flex-col justify-center items-start">
                         {welcomeLines.map((text, index) => (
-                            <span key={index} className="relative block text-darkBrown md:tracking-normal tracking-wide">
+                            <span key={index} className="relative block text-darkBrown md:tracking-normal tracking-[0.020em]">
                                 {text}
-                                <span className="clip-text-welcome md:tracking-normal tracking-wide">{text}</span>
+                                <span className="clip-text-welcome md:tracking-normal tracking-[0.020em]">{text}</span>
                             </span>
                         ))}
                     </div>
