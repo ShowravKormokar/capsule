@@ -2,7 +2,7 @@
 
 > ⚠️ **This Website Is Still Under Construction**
 
-A faithful React.js clone of the award-winning **"Capsule"** website by Moyra ([capsule.moyra.co](https://capsule.moyra.co)), which won Awwwards Site of the Day. This project was built for learning purposes to master advanced frontend techniques like scroll-triggered animations, smooth page transitions, and responsive design.
+A faithful React.js clone of the **"awwwards"** ([Awwwards.com](https://www.awwwards.com/sites/capsules-r)) SOTD-winning **"Capsule"** website by Moyra ([capsule.moyra.co](https://capsule.moyra.co)), which won Awwwards Site of the Day. This project was built for learning purposes to master advanced frontend techniques like scroll-triggered animations, smooth page transitions, and responsive design.
 - React Vite (version: 19.1.0)
 - React Router Dom (Version: 7.6.2)
 - Tailwind CSS (Version: 4.1.8)
@@ -35,3 +35,8 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/showravkormokar/capsule.git
    cd capsule
+
+## 🪧 Notice
+
+To build this website only study perpose and understanding animation and increase design knowledge.
+All rights reserve ([capsule.moyra.co](https://capsule.moyra.co))
