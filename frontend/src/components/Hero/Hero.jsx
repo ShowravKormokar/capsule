@@ -20,7 +20,7 @@ const Hero = () => {
     });
 
     return (
-        <section className="hero-section w-dvw h-dvh border p-2">
+        <section className="hero-section w-dvw h-dvh p-1 mb-20">
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
 
                 {/* Background image (down layer) */}

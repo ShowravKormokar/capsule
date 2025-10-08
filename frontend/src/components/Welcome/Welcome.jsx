@@ -23,10 +23,10 @@ const Welcome = () => {
     });
 
     return (
-        <div className='welcome-section my-36 mx-10 text-[#2A2725] '>
+        <div className='welcome-section w-full h-dvh text-[#2A2725]'>
             <div className='flex flex-col gap-2 tracking-[-4] leading-2'>
-                <div className=" text-[70px] welcome-line">
-                    <p className="welcome-text flex flex-col">
+                <div className="w-full text-[70px] welcome-line px-7 py-20">
+                    <p className="w-full welcome-text flex flex-col justify-center items-start">
                         <span className="relative block text-darkBrown">
                             Welcome to a world of wild California
                             <span className="clip-text-welcome">Welcome to a world of wild California</span>
