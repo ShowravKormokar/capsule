@@ -35,14 +35,14 @@ const Welcome = () => {
         <div className='welcome-section w-full h-dvh text-[#2A2725]'>
             <div className='flex flex-col gap-2 tracking-[-4] leading-2'>
                 <div className="w-full md:text-[70px] text-4xl welcome-line md:px-7 px-6 md:py-20">
-                    <p className="w-full welcome-text flex flex-col justify-center items-start">
+                    <div className="w-full welcome-text flex flex-col justify-center items-start">
                         {welcomeLines.map((text, index) => (
                             <span key={index} className="relative block text-darkBrown">
                                 {text}
                                 <span className="clip-text-welcome">{text}</span>
                             </span>
                         ))}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
