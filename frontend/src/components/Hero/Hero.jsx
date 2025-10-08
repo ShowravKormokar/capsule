@@ -14,8 +14,9 @@ const Hero = () => {
     useGSAP(() => {
         if (!isMobHero) {
             gsap.to(".hero-section .hero-img", {
-                yPercent: 10,
-                scale: 1.1,
+                // yPercent: "-5",
+                stagger: 0.02,
+                scale: 1,
                 ease: "power1.inOut",
                 scrollTrigger: {
                     trigger: ".hero-section",
@@ -33,7 +34,7 @@ const Hero = () => {
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
                 <div className="responsive-mobile">
                     {/* Background image (down layer) */}
-                    <div className="hero-img absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0 md:block hidden" />
+                    <div className="hero-img absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0 md:block hidden scale-125" />
 
                     {/* Mobile image fallback */}
                     <div className="block lg:hidden mt-10 mb-6">
