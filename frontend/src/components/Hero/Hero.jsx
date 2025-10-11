@@ -14,9 +14,9 @@ const Hero = () => {
     useGSAP(() => {
         if (!isMobHero) {
             gsap.to(".hero-section .hero-img", {
-                // yPercent: "-5",
+                yPercent: "-5",
                 stagger: 0.02,
-                scale: 1,
+                scale: 1.2,
                 ease: "power1.inOut",
                 scrollTrigger: {
                     trigger: ".hero-section",
@@ -34,7 +34,7 @@ const Hero = () => {
             <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden">
                 <div className="responsive-mobile">
                     {/* Background image (down layer) */}
-                    <div className="hero-img absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0 md:block hidden scale-125" />
+                    <div className="hero-img absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0 md:block hidden" />
 
                     {/* Mobile image fallback */}
                     <div className="block lg:hidden mt-10 mb-6">
@@ -58,13 +58,13 @@ const Hero = () => {
                 <div className="h-full p-4 flex flex-col md:justify-center">
                     <div className="relative">
                         <h1
-                            className="text-[#f4efe7] text-start text-6xl mt-6 md:text-9xl font-bold tracking-wider lg:absolute lg:bottom-44 lg:left-2"
+                            className="text-[#f4efe7] text-start text-6xl md:text-9xl font-bold tracking-wider lg:absolute lg:bottom-44 lg:left-2"
                             style={{ textShadow: '2px 2px 4px #aaa' }}
                         >
                             Capsules®
                         </h1>
 
-                        <div className="w-full h-auto absolute md:top-56 top-30 flex md:flex-row flex-col md:justify-between md:items-end">
+                        <div className="w-full h-auto absolute md:top-64 top-30 flex md:flex-row flex-col md:justify-between md:items-end">
                             <h2
                                 className="text-start lg:mt-0 md:text-[#f4efe7] text-[#b1a696] text-2xl font-bold md:tracking-wider leading-5 flex flex-col gap-1"
                                 style={{ textShadow: '2px 2px 4px #000' }}
