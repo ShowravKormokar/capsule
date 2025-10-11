@@ -56,7 +56,7 @@ const Choose = () => {
     return (
         <section className="choose-section w-full h-dvh p-8 pt-10">
             <p className='text-[.7rem] text-[#eae5dd] choose-subtitle'>Discover Available Capsule<span>®</span></p>
-            <div className="mt-10 title-part origin-bottom ">
+            <div className="lg:mt-10 mt-7 title-part origin-bottom ">
                 <h1 className='choose-heading text-[#f4efe7] lg:text-[9.5rem] text-[3rem] leading-[0.9] font-medium tracking-tighter choose-title'>
                     <span className="choose-title-break">Choose the one<span className="choose-title-clip">Choose the one</span></span>
                 </h1>
@@ -64,7 +64,7 @@ const Choose = () => {
                     <span className="choose-title-break">you like best<span className="choose-title-clip">you like best</span></span>
                 </h1>
             </div>
-            <div className="choose-sec w-full flex lg:flex-row flex-col justify-center items-start gap-10 lg:mt-16">
+            <div className="choose-sec w-full flex lg:flex-row flex-col justify-center items-start gap-10 lg:mt-10">
                 <div className='lg:w-1/2 w-full text-[#b1a696] lg:text-[2rem] text-[1rem] md:leading-[1.1] lg:mt-0 mt-10 lg:pr-16'>
                     <p>You can choose one of three premium capsule houses in our offer. Each of our capsules provides the highest quality and meets the standards adjusted to your needs. Choose the one you like.</p>
                 </div>
