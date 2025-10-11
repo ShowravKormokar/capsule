@@ -34,7 +34,7 @@ const Welcome = () => {
     });
 
     return (
-        <div className='welcome-section w-full h-[120vh] text-[#2A2725]  md:px-7 px-6 border border-amber-500'>
+        <div className='welcome-section w-full h-[120vh] text-[#2A2725]  md:px-7 px-6 '>
             <div className='flex flex-col gap-2 tracking-[-4] leading-2'>
                 <div className="w-full md:w-[86%] md:text-[64px] text-[34px] welcome-line md:pt-20">
                     <div className="w-full welcome-text flex flex-col justify-center items-start">
