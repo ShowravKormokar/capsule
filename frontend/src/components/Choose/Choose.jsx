@@ -29,11 +29,13 @@ const Choose = () => {
         });
 
         // Animate the div height
-        tl.fromTo(
-            ".title-part",
-            { height: "10vh" },
-            { height: `${isMobD ? "22vh" : "50vh"}`, ease: "none" }
-        );
+        if (!isMobD) {
+            tl.fromTo(
+                ".title-part",
+                { height: "10vh" },
+                { height: `${isMobD ? "22vh" : "50vh"}`, ease: "none" }
+            );
+        }
 
         // Animate text reveal — run *at the same time*
         tl.to(
@@ -47,10 +49,12 @@ const Choose = () => {
             "<" // 👈 runs at the same time as the previous animation
         );
 
-        tl.from(".choose-sec", {
-            yPercent: 50,
-            duration: 1,
-        }, "<");
+        if (!isMobD) {
+            tl.from(".choose-sec", {
+                yPercent: 100,
+                duration: 1,
+            }, "<");
+        }
     });
 
     return (
@@ -64,8 +68,8 @@ const Choose = () => {
                     <span className="choose-title-break lg:pb-8">you like best<span className="choose-title-clip lg:-translate-y-2">you like best</span></span>
                 </h1>
             </div>
-            <div className="choose-sec w-full flex lg:flex-row flex-col justify-center items-start gap-10 lg:mt-10">
-                <div className='lg:w-1/2 w-full text-[#b1a696] lg:text-[2rem] text-[1rem] md:leading-[1.1] lg:mt-0 mt-10 lg:pr-16'>
+            <div className="choose-sec w-full flex lg:flex-row flex-col justify-center items-start gap-10 lg:mt-0">
+                <div className='lg:w-1/2 w-full text-[#b1a696] lg:text-[2rem] text-[1rem] md:leading-[1.1] lg:mt-0 mt-8 lg:pr-16'>
                     <p>You can choose one of three premium capsule houses in our offer. Each of our capsules provides the highest quality and meets the standards adjusted to your needs. Choose the one you like.</p>
                 </div>
                 <div className='lg:w-1/2 w-full'>
