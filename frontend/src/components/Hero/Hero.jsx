@@ -37,7 +37,7 @@ const Hero = () => {
                     <div className="hero-img absolute inset-0 bg-[url('./assets/cap1.png')] bg-no-repeat bg-cover bg-center z-0 md:block hidden" />
 
                     {/* Mobile image fallback */}
-                    <div className="block lg:hidden mt-10 mb-6">
+                    <div className="block lg:hidden mt-6 mb-6">
                         <img
                             src={mobileHeroBg}
                             alt="mobile bg"
@@ -52,7 +52,7 @@ const Hero = () => {
                         loop
                         muted
                         playsInline
-                        className="absolute inset-0 md:w-full md:h-full object-cover z-10 pointer-events-none object-center opacity-50 mix-blend-hard-light md:top-0 top-[30%] h-[57%]  rounded-[2rem] md:px-0 px-4"
+                        className="absolute inset-0 md:w-full md:h-full object-cover z-10 pointer-events-none object-center opacity-50 mix-blend-hard-light md:top-0 top-[5%] h-[90%]  rounded-[2rem] md:px-0"
                     ></video>
                 </div>
                 <div className="h-full p-4 flex flex-col md:justify-center">
@@ -64,7 +64,7 @@ const Hero = () => {
                             Capsules®
                         </h1>
 
-                        <div className="w-full h-auto absolute md:top-64 top-30 flex md:flex-row flex-col md:justify-between md:items-end">
+                        <div className="w-full h-auto absolute md:top-64 top-24 flex md:flex-row flex-col md:justify-between md:items-end">
                             <h2
                                 className="text-start lg:mt-0 md:text-[#f4efe7] text-[#b1a696] text-2xl font-bold md:tracking-wider leading-5 flex flex-col gap-1"
                                 style={{ textShadow: '2px 2px 4px #000' }}
