@@ -21,3 +21,13 @@ export const welcomeLinesSM = [
     "destination on the",
     "United States.",
 ];
+
+export const chooseLinesLG =[
+    "Choose the one",
+    "you like best"
+];
+export const chooseLinesSM =[
+    "Choose the",
+    "one you like",
+    "best"
+];
