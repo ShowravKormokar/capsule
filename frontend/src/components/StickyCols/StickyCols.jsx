@@ -2,12 +2,12 @@ import colimg1 from "../../assets/cap1-square.jpg";
 
 const StickyCols = () => {
     return (
-        <section className="sticky-cols">
+        <section className="sticky-cols w-screen h-screen overflow-hidden">
             <div className="sticky-cols-wrapper">
                 <div className="col col-1">
                     <div className="col-content">
                         <div className="col-content-wrapper">
-                            <h1>Enjoy the view
+                            <h1 className="text-2xl font-bold leading-1">Enjoy the view
                                 <br />
                                 through—the wide
                                 <br />
@@ -15,7 +15,7 @@ const StickyCols = () => {
                                 <br />
                                 window
                             </h1>
-                            <p> Get closer to the desert nature than ever before
+                            <p className="text-md font-medium"> Get closer to the desert nature than ever before
                                 <br />
                                 and admire this unique, breathtaking landscape.
                             </p>
@@ -36,7 +36,7 @@ const StickyCols = () => {
                 </div>
                 <div className="col col-3">
                     <div className="col-content-wrapper">
-                        <h1>Enjoy the view
+                        <h1 className="text-2xl font-bold leading-1">Enjoy the view
                             <br />
                             through—the wide
                             <br />
@@ -44,7 +44,7 @@ const StickyCols = () => {
                             <br />
                             window
                         </h1>
-                        <p> Get closer to the desert nature than ever before
+                        <p className="text-md font-medium"> Get closer to the desert nature than ever before
                             <br />
                             and admire this unique, breathtaking landscape.
                         </p>

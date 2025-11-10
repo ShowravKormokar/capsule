@@ -80,3 +80,109 @@ body {
 .title-part {
 	overflow: hidden;
 }
+
+/* ------------------ Sticky Section Style ------------------- */
+.sticky-cols {
+	padding: 0.5rem;
+
+	.sticky-cols-wrapper {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+	}
+
+	.col {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		will-change: transform;
+	}
+
+	.col h1,
+	.col p {
+		color: #f4efe7;
+		width: 60%;
+	}
+
+	.col-2 {
+		transform: translateX(100%);
+	}
+
+	.col .col-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.col-content,
+	.col-img {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 0.5rem;
+	}
+
+	.col-3 {
+		transform: translateX(100%) translateY(100%);
+		padding: 0.5rem;
+	}
+
+	.col-4 {
+		transform: translateX(100%) translateY(100%);
+	}
+
+	.col-content-wrapper {
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.col-content-wrapper,
+	.col-img-wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-color: #181717;
+		border-radius: 3rem;
+		overflow: hidden;
+	}
+
+	.col-content-wrapper-2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.col-img-1,
+	.col-img-2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.col-img-2{
+		clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+	}
+
+	.col-img-2{
+		transform: scale(1.25);
+	}
+
+	.line{
+		overflow: hidden;
+	}
+
+	.line span{
+		display: block;
+		will-change: transform;
+	}
+}
