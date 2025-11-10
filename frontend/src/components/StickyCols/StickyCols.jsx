@@ -1,6 +1,8 @@
 import gsap, { ScrollTrigger, SplitText } from "gsap/all";
-import colimg1 from "../../assets/cap1-square.jpg";
 import { useGSAP } from "@gsap/react";
+import colimg1 from "../../assets/cap1-square.jpg";
+import colimg2 from "../../assets/cap2-square.jpg";
+import colimg3 from "../../assets/cap3-square.jpg";
 
 const StickyCols = () => {
 
@@ -38,7 +40,7 @@ const StickyCols = () => {
         tl.to(".col-1", { opacity: 0, scale: 0.8, duration: 0.8 })
             .to(".col-2", { x: "0%", duration: 0.8 }, "<")
             .to(".col-3", { y: "0%", duration: 0.8 }, "<")
-            .to(".col-img-1 img", { scale: 1.25, duration: 0.8 }, "<")
+            .to(".col-img-1 img", { scale: 1, duration: 0.8 }, "<")
             .to(".col-img-2", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 duration: 0.8,
@@ -46,7 +48,7 @@ const StickyCols = () => {
             .to(".col-img-2 img", { scale: 1, duration: 0.8 }, "<")
 
             // PHASE 2: Switch col-2 -> col-3 content
-            .to(".col-2", { opacity: 0, scale: 0.8, duration: 0.8 })
+            .to(".col-2", { opacity: 0, scale: 1, duration: 0.8 })
             .to(".col-4", { y: "0%", duration: 0.8 }, "<")
             .to(".col-3 .col-content-wrapper .line span", {
                 yPercent: -125,
@@ -66,7 +68,7 @@ const StickyCols = () => {
 
 
     return (
-        <section className="sticky-cols w-screen h-screen overflow-hidden">
+        <section className="sticky-cols w-screen overflow-hidden">
             <div className="sticky-cols-wrapper">
                 <div className="col col-1">
                     <div className="col-content">

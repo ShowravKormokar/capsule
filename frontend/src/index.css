@@ -169,19 +169,19 @@ body {
 		height: 100%;
 	}
 
-	.col-img-2{
+	.col-img-2 {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 	}
 
-	.col-img-2{
-		transform: scale(1.25);
+	.col-img-2 {
+		transform: scale(1);
 	}
 
-	.line{
+	.line {
 		overflow: hidden;
 	}
 
-	.line span{
+	.line span {
 		display: block;
 		will-change: transform;
 	}
