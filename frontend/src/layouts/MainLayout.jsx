@@ -4,10 +4,20 @@ import { ScrollSmoother } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../components/Navbar/Navbar";
+import { useEffect } from "react";
+import { initLenis } from "../lib/lenis";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const MainLayout = () => {
+
+    // useEffect(() => {
+    //     const lenis = initLenis();
+    //     return () => {
+    //         lenis.destroy(); // cleanup on unmount
+    //     };
+    // }, []);
+
     useGSAP(() => {
         ScrollSmoother.create({
             wrapper: "#smooth-wrapper",

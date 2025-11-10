@@ -1,6 +1,70 @@
+import gsap, { ScrollTrigger, SplitText } from "gsap/all";
 import colimg1 from "../../assets/cap1-square.jpg";
+import { useGSAP } from "@gsap/react";
 
 const StickyCols = () => {
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        // 1️⃣ Split text lines once DOM ready
+        const textElements = document.querySelectorAll(".col-3 h1, .col-3 p");
+        textElements.forEach((element) => {
+            const split = new SplitText(element, { type: "lines", linesClass: "line" });
+            split.lines.forEach((line) => {
+                line.innerHTML = `<span>${line.textContent}</span>`;
+            });
+        });
+
+        // Refresh ScrollTrigger after split
+        ScrollTrigger.refresh();
+
+        // 2️⃣ Initial state
+        gsap.set(".col-3 .col-content-wrapper .line span", { yPercent: 0 });
+        gsap.set(".col-3 .col-content-wrapper-2 .line span", { yPercent: -125 });
+
+        // 3️⃣ Controlled phase logic using timeline (simpler and stable)
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".sticky-cols",
+                start: "top top",
+                end: "+=500%",
+                pin: true,
+                scrub: 1,
+            },
+        });
+
+        // PHASE 1: Reveal col-2, hide col-1
+        tl.to(".col-1", { opacity: 0, scale: 0.8, duration: 0.8 })
+            .to(".col-2", { x: "0%", duration: 0.8 }, "<")
+            .to(".col-3", { y: "0%", duration: 0.8 }, "<")
+            .to(".col-img-1 img", { scale: 1.25, duration: 0.8 }, "<")
+            .to(".col-img-2", {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                duration: 0.8,
+            }, "<")
+            .to(".col-img-2 img", { scale: 1, duration: 0.8 }, "<")
+
+            // PHASE 2: Switch col-2 -> col-3 content
+            .to(".col-2", { opacity: 0, scale: 0.8, duration: 0.8 })
+            .to(".col-4", { y: "0%", duration: 0.8 }, "<")
+            .to(".col-3 .col-content-wrapper .line span", {
+                yPercent: -125,
+                duration: 0.8,
+            })
+            .to(".col-3 .col-content-wrapper-2 .line span", {
+                yPercent: 0,
+                delay: 0.4,
+                duration: 0.8,
+            }, "<");
+
+        return () => {
+            ScrollTrigger.getAll().forEach((st) => st.kill());
+            tl.kill();
+        };
+    });
+
+
     return (
         <section className="sticky-cols w-screen h-screen overflow-hidden">
             <div className="sticky-cols-wrapper">
