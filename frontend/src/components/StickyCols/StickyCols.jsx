@@ -36,7 +36,7 @@ const StickyCols = () => {
                 end: "+=200%",
                 pin: true,
                 scrub: 1,
-                markers: true,
+                // markers: true,
             },
         });
         tl.add(() => setReveal(false));
