@@ -33,7 +33,7 @@ const StickyCols = () => {
             scrollTrigger: {
                 trigger: ".sticky-cols",
                 start: "top top",
-                end: "+=200%",
+                end: "+=90%",
                 pin: true,
                 scrub: 1,
                 // markers: true,
