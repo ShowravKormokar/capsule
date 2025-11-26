@@ -1,5 +1,8 @@
 # 🏆 Capsule - Awwwards SOTD Clone
 
+![Capsule Showcase](https://raw.githubusercontent.com/ShowravKormokar/capsule/refs/heads/main/frontend/src/assets/showcase-img.png)
+
+
 > ⚠️ **This Website Is Still Under Construction**
 
 A faithful React.js clone of the **"awwwards"** ([Awwwards.com](https://www.awwwards.com/sites/capsules-r)) SOTD-winning **"Capsule"** website by Moyra ([capsule.moyra.co](https://capsule.moyra.co)), which won Awwwards Site of the Day. This project was built for learning purposes to master advanced frontend techniques like scroll-triggered animations, smooth page transitions, and responsive design.
