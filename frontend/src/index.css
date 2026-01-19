@@ -30,10 +30,11 @@ body {
 	width: 100%;
 	height: 100svh;
 	pointer-events: none;
+	overflow: hidden;
 }
 
 .preloader-progress {
-	background-color: #f4efe7;
+	background-color: var(--base-200);
 	z-index: 1;
 	will-change: opacity;
 }
@@ -45,7 +46,7 @@ body {
 	transform: translateX(-50%) scaleX(0);
 	width: 55%;
 	height: 100%;
-	background-color: aqua;
+	background-color: var(--base-300);
 	transform-origin: left;
 	will-change: transform;
 }
@@ -59,19 +60,22 @@ body {
 	text-align: center;
 	mix-blend-mode: difference;
 	z-index: 2;
+	overflow: hidden;
 }
 
-.preloader-logo h1 {
+.preloader-logo .logo-text {
 	position: relative;
-	color: #181717;
+	color: var(--base-300);
 	font-size: 3rem;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 1;
+	overflow: hidden;
 }
 
 .preloader-mask {
 	background-color: var(--base-100);
-	mask: linear-gradient(var(--base-300), var(--base-300)), url("./../public/preloader-progress.svg") center/50% no-repeat;
+	mask: linear-gradient(var(--base-300), var(--base-300)), url("./../public/preloader-bg.svg") center/40% no-repeat;
+	-webkit-mask-composite: source-out;
 	mask-composite: subtract;
 	will-change: transform;
 	z-index: 1;
@@ -95,12 +99,14 @@ body {
 	opacity: 0.5;
 }
 
+
 .line,
 .char {
 	position: relative;
 	padding-bottom: 0.2em;
 	margin-bottom: -0.2em;
 	will-change: transform;
+	overflow: hidden;
 
 }
 
@@ -291,12 +297,13 @@ body {
 		transform: translateX(0%) scale(0);
 	}
 
-	.preloader-logo h1 {
+	.preloader-logo .logo-text {
 		font-size: 2rem;
 	}
 
 	.preloader-mask {
-		mask: linear-gradient(var(--base-300), var(--base-300)), url("./../public/preloader-progress.svg") center/90% no-repeat;
+		mask: linear-gradient(var(--base-300), var(--base-300)), url("./../public/preloader-bg.svg") center/90% no-repeat;
+		-webkit-mask-composite: source-out;
 		mask-composite: subtract;
 	}
 
