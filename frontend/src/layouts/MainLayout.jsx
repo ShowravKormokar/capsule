@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../components/Navbar/Navbar";
 import { useEffect } from "react";
 import { initLenis } from "../lib/lenis";
+import Preloader from "../components/Preloader/Preloader";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -29,6 +30,7 @@ const MainLayout = () => {
 
     return (
         <>
+            <Preloader />
             <Navbar />
             <div id="smooth-wrapper">
                 <div id="smooth-content">

@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+:root {
+	--base-100: #181717;
+	--base-200: #292725;
+	--base-300: #f5f5f5;
+}
+
 html,
 body {
 	background-color: #181717;
@@ -11,6 +17,91 @@ body {
 	/* Chrome, Edge, Safari */
 	-ms-overflow-style: none;
 	/* IE & Edge */
+}
+
+
+/* ----------------- Preloader Styles ---------------- */
+.preloader-progress,
+.preloader-mask,
+.preloader-content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100svh;
+	pointer-events: none;
+}
+
+.preloader-progress {
+	background-color: #f4efe7;
+	z-index: 1;
+	will-change: opacity;
+}
+
+.preloader-progress-bar {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) scaleX(0);
+	width: 55%;
+	height: 100%;
+	background-color: aqua;
+	transform-origin: left;
+	will-change: transform;
+}
+
+.preloader-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	mix-blend-mode: difference;
+	z-index: 2;
+}
+
+.preloader-logo h1 {
+	position: relative;
+	color: #181717;
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.preloader-mask {
+	background-color: var(--base-100);
+	mask: linear-gradient(var(--base-300), var(--base-300)), url("./../public/preloader-progress.svg") center/50% no-repeat;
+	mask-composite: subtract;
+	will-change: transform;
+	z-index: 1;
+}
+
+.preloader-content {
+	z-index: 2;
+}
+
+.preloader-footer {
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30%;
+	text-align: center;
+}
+
+.preloader-footer p {
+	color: var(--base-300);
+	opacity: 0.5;
+}
+
+.line,
+.char {
+	position: relative;
+	padding-bottom: 0.2em;
+	margin-bottom: -0.2em;
+	will-change: transform;
+
 }
 
 /* Glassmorphism card effect */
@@ -189,5 +280,27 @@ body {
 	.line span {
 		display: block;
 		will-change: transform;
+	}
+}
+
+
+@media(max-width: 800px) {
+	.preloader-progress-bar {
+		left: 0%;
+		width: 100%;
+		transform: translateX(0%) scale(0);
+	}
+
+	.preloader-logo h1 {
+		font-size: 2rem;
+	}
+
+	.preloader-mask {
+		mask: linear-gradient(var(--base-300), var(--base-300)), url("./../public/preloader-progress.svg") center/90% no-repeat;
+		mask-composite: subtract;
+	}
+
+	.preloader-footer {
+		width: 75%;
 	}
 }
