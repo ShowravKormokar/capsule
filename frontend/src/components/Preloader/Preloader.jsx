@@ -34,14 +34,14 @@ const Preloader = () => {
 
                 function animateProgress(duration = 4) {
                     const tl = gsap.timeline();
-                    const counterSteps = 4;
+                    const counterSteps = 3;
                     let currentProgress = 0;
 
                     for (let i = 0; i < counterSteps; i++) {
                         const finalStep = i === counterSteps - 1;
                         const targetProgress = finalStep
                             ? 1
-                            : Math.min(currentProgress + Math.random() * 0.4, 0.2);
+                            : Math.min(currentProgress + Math.random() * 0.3, 0.2);
                         currentProgress = targetProgress;
                         tl.to(".preloader-progress-bar", {
                             scaleX: targetProgress,
@@ -101,6 +101,13 @@ const Preloader = () => {
                         duration: 2.5,
                         ease: "power3.out"
                     }, "<")
+                    .to
+                    (
+                        splits.footerLines.lines,
+                        {
+                            opacity: 0,
+                        },
+                    )
                     ;
             });
         });

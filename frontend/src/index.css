@@ -99,6 +99,9 @@ body {
 	opacity: 0.5;
 }
 
+.char {
+	overflow-x: hidden;
+}
 
 .line,
 .char {
