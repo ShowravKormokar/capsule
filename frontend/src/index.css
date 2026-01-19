@@ -100,11 +100,13 @@ body {
 }
 
 .char {
+	display: inline-block;
 	overflow-x: hidden;
 }
 
 .line,
 .char {
+	display: inline-block;
 	position: relative;
 	padding-bottom: 0.2em;
 	margin-bottom: -0.2em;

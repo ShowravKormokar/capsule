@@ -27,6 +27,11 @@ const Preloader = () => {
                     linesClass: "line",
                 });
 
+                // after SplitText creation
+                gsap.set([splits.logoChars.chars, splits.footerLines.lines], {
+                    force3D: true,
+                });
+
                 // --------- INITIAL STATES ----------
                 gsap.set(splits.logoChars.chars, { xPercent: 100 });
                 gsap.set(splits.footerLines.lines, { yPercent: 100 });
@@ -101,14 +106,15 @@ const Preloader = () => {
                         duration: 2.5,
                         ease: "power3.out"
                     }, "<")
-                    .to
-                    (
+                    .to(
                         splits.footerLines.lines,
                         {
                             opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
                         },
-                    )
-                    ;
+                        ">-0.2"
+                    ).set(".preloader", { display: none });
             });
         });
 
