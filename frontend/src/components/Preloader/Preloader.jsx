@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
@@ -6,18 +6,22 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 const Preloader = () => {
+    const preloaderLogoRef = useRef(null);
+
     useGSAP(() => {
         let splits = {};
 
         const ctx = gsap.context(() => {
             document.fonts.ready.then(() => {
+                if (!preloaderLogoRef) console.log("null");
+
                 // --------- SPLIT TEXT CREATION ----------
-                const logoEl = document.querySelector(".preloader-logo h1");
+                const logoEl = document.querySelector(".preloader-logo .logo-text");
                 const footerEl = document.querySelector(".preloader-footer p");
 
-                if (!logoEl || !footerEl) return;
+                if (!footerEl) return;
 
-                splits.logoChars = new SplitText(logoEl, {
+                splits.logoChars = new SplitText(".logo-text", {
                     type: "chars",
                     charsClass: "char",
                 });
@@ -33,7 +37,7 @@ const Preloader = () => {
                 });
 
                 // --------- INITIAL STATES ----------
-                gsap.set(splits.logoChars.chars, { xPercent: 100 });
+                gsap.set(splits.logoChars.chars, { xPercent: 100, overflow: "hidden" });
                 gsap.set(splits.footerLines.lines, { yPercent: 100 });
                 gsap.set(".preloader-progress-bar", { scaleX: 0 });
 
@@ -113,8 +117,8 @@ const Preloader = () => {
                             duration: 0.3,
                             ease: "power2.out",
                         },
-                        ">-0.2"
-                    ).set(".preloader", { display: none });
+                        "+=0.2"
+                    ).set(".preloader", { display: "none" });
             });
         });
 
@@ -129,7 +133,7 @@ const Preloader = () => {
             <div className="preloader-progress">
                 <div className="preloader-progress-bar"></div>
                 <div className="preloader-logo">
-                    <h1 className="logo-text">Capsule</h1>
+                    <h1 ref={preloaderLogoRef} className="logo-text">Capsule</h1>
                 </div>
             </div>
 
