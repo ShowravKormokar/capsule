@@ -101,6 +101,7 @@ body {
 
 .preloader-logo h1 .char2 {
 	position: relative;
+	transform: translateX(0%);
 	display: inline-block;
 	overflow-x: hidden;
 	will-change: transform;
@@ -110,6 +111,7 @@ body {
 .char2 {
 	display: inline-block;
 	position: relative;
+	transform: translateY(0%);
 	padding-bottom: 0.2em;
 	margin-bottom: -0.2em;
 	will-change: transform;
