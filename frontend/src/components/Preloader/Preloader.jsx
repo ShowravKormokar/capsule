@@ -16,7 +16,7 @@ const Preloader = () => {
                 if (!preloaderLogoRef) console.log("null");
 
                 // --------- SPLIT TEXT CREATION ----------
-                const logoEl = document.querySelector(".preloader-logo .logo-text");
+                // const logoEl = document.querySelector(".preloader-logo .logo-text");
                 const footerEl = document.querySelector(".preloader-footer p");
 
                 if (!footerEl) return;
@@ -28,10 +28,10 @@ const Preloader = () => {
 
                 const logoSplit = new SplitText(preloaderLogoRef.current, { type: "chars", charsClass: "char2" })
 
-                logoSplit.chars.forEach(char => {
-                    char.style.overflow = "hidden";
-                    char.style.display = "inline-block";
-                });
+                // logoSplit.chars.forEach(char => {
+                //     char.style.overflow = "hidden";
+                //     char.style.display = "inline-block";
+                // });
 
                 splits.footerLines = new SplitText(footerEl, {
                     type: "lines",
@@ -44,7 +44,7 @@ const Preloader = () => {
                 });
 
                 // --------- INITIAL STATES ----------
-                gsap.set(logoSplit.chars, { xPercent: 100, overflow: "hidden" });
+                gsap.set(logoSplit.chars, { xPercent: 100 });
                 gsap.set(splits.footerLines.lines, { yPercent: 100 });
                 gsap.set(".preloader-progress-bar", { scaleX: 0 });
 
@@ -135,7 +135,7 @@ const Preloader = () => {
         };
     }, []);
 
-    console.log("Prod 49 -> Preloader")
+    console.log("Prod 51 -> Preloader")
 
     return (
         <div className="preloader relative z-51">
