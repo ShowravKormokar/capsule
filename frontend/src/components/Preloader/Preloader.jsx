@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
@@ -8,7 +8,7 @@ gsap.registerPlugin(SplitText);
 const Preloader = () => {
     const preloaderLogoRef = useRef(null);
 
-    useGSAP(() => {
+    useLayoutEffect(() => {
         let splits = {};
 
         const ctx = gsap.context(() => {
@@ -27,6 +27,11 @@ const Preloader = () => {
                 // });
 
                 const logoSplit = new SplitText(preloaderLogoRef.current, { type: "chars", charsClass: "char2" })
+
+                logoSplit.chars.forEach(char => {
+                    char.style.overflow = "hidden";
+                    char.style.display = "inline-block";
+                });
 
                 splits.footerLines = new SplitText(footerEl, {
                     type: "lines",
