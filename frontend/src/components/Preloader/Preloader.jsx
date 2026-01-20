@@ -96,6 +96,7 @@ const Preloader = () => {
                         duration: 1,
                         ease: "power4.inOut",
                     }, "-=0.5")
+                    .set(logoSplit.chars, { overflow: "hidden" }, "<")
                     .to
                     (
                         splits.footerLines.lines,
@@ -135,7 +136,7 @@ const Preloader = () => {
         };
     }, []);
 
-    console.log("Prod 51 -> Preloader")
+    console.log("Prod 52 -> Preloader")
 
     return (
         <div className="preloader relative z-51">

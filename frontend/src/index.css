@@ -56,7 +56,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
+	/* width: 100%; */
 	text-align: center;
 	mix-blend-mode: difference;
 	z-index: 2;
@@ -100,8 +100,10 @@ body {
 }
 
 .preloader-logo h1 .char2 {
+	position: relative;
 	display: inline-block;
 	overflow-x: hidden;
+	will-change: transform;
 }
 
 .line,
