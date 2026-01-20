@@ -55,16 +55,16 @@ const Hero = () => {
                         className="absolute inset-0 md:w-full md:h-full object-cover z-10 pointer-events-none object-center opacity-50 mix-blend-hard-light md:top-0 top-[5%] h-[90%]  rounded-[2rem] md:px-0"
                     ></video>
                 </div>
-                <div className="h-full p-4 flex flex-col md:justify-center">
-                    <div className="relative">
+                <div className="p-4 flex flex-col md:justify-center">
+                    <div className="relative h-dvh">
                         <h1
-                            className="text-[#f4efe7] text-start text-6xl md:text-9xl font-bold tracking-wider lg:absolute lg:bottom-44 lg:left-2"
+                            className="text-[#f4efe7] text-start text-6xl md:text-9xl font-bold tracking-wider lg:absolute  lg:left-2"
                             style={{ textShadow: '2px 2px 4px #aaa' }}
                         >
                             Capsules®
                         </h1>
 
-                        <div className="w-full h-auto absolute md:top-64 top-24 flex md:flex-row flex-col md:justify-between md:items-end">
+                        <div className="w-full h-auto absolute  top-24 md:bottom-[8%] lg:bottom-[9%] flex md:flex-row flex-col md:justify-between md:items-end">
                             <h2
                                 className="text-start lg:mt-0 md:text-[#f4efe7] text-[#b1a696] text-2xl font-bold md:tracking-wider leading-5 flex flex-col gap-1"
                                 style={{ textShadow: '2px 2px 4px #000' }}

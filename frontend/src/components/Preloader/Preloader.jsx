@@ -28,16 +28,16 @@ const Preloader = () => {
 
                 const logoSplit = new SplitText(preloaderLogoRef.current, { type: "chars", charsClass: "char2" })
 
-                // logoSplit.chars.forEach(char => {
-                //     char.style.overflow = "hidden";
-                //     char.style.display = "inline-block";
-                // });
+                logoSplit.chars.forEach(char => {
+                    char.style.overflow = "hidden";
+                    char.style.display = "inline-block";
+                });
 
                 splits.footerLines = new SplitText(footerEl, {
                     type: "lines",
                     linesClass: "line",
                 });
-
+ 
                 // after SplitText creation
                 gsap.set([logoSplit.chars, splits.footerLines.lines], {
                     force3D: true,
