@@ -21,10 +21,12 @@ const Preloader = () => {
 
                 if (!footerEl) return;
 
-                splits.logoChars = new SplitText(".logo-text", {
-                    type: "chars",
-                    charsClass: "char",
-                });
+                // logoSplit = new SplitText(".logo-text", {
+                //     type: "chars",
+                //     charsClass: "char2",
+                // });
+
+                const logoSplit = new SplitText(preloaderLogoRef.current, { type: "chars", charsClass: "char2" })
 
                 splits.footerLines = new SplitText(footerEl, {
                     type: "lines",
@@ -32,12 +34,12 @@ const Preloader = () => {
                 });
 
                 // after SplitText creation
-                gsap.set([splits.logoChars.chars, splits.footerLines.lines], {
+                gsap.set([logoSplit.chars, splits.footerLines.lines], {
                     force3D: true,
                 });
 
                 // --------- INITIAL STATES ----------
-                gsap.set(splits.logoChars.chars, { xPercent: 100, overflow: "hidden" });
+                gsap.set(logoSplit.chars, { xPercent: 100, overflow: "hidden" });
                 gsap.set(splits.footerLines.lines, { yPercent: 100 });
                 gsap.set(".preloader-progress-bar", { scaleX: 0 });
 
@@ -64,7 +66,7 @@ const Preloader = () => {
                 // --------- TIMELINE ----------
                 const tl = gsap.timeline({ delay: 0.2 });
 
-                tl.to(splits.logoChars.chars, {
+                tl.to(logoSplit.chars, {
                     xPercent: 0,
                     stagger: 0.05,
                     duration: 1,
@@ -83,7 +85,7 @@ const Preloader = () => {
                         "0.25"
                     )
                     .set(".preloader-progress", { backgroundColor: "var(--base-300)" })
-                    .to(splits.logoChars.chars, {
+                    .to(logoSplit.chars, {
                         xPercent: -100,
                         stagger: 0.05,
                         duration: 1,
@@ -127,6 +129,8 @@ const Preloader = () => {
             ctx.revert();
         };
     }, []);
+
+    console.log("Prod 49 -> Preloader")
 
     return (
         <div className="preloader relative z-51">
