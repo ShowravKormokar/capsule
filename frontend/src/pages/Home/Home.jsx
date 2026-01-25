@@ -3,6 +3,7 @@ import Hero from '../../components/Hero/Hero'
 import Welcome from '../../components/Welcome/Welcome'
 import Choose from '../../components/Choose/Choose'
 import StickyCols from '../../components/StickyCols/StickyCols'
+import Gallery from '../../components/Gallery/Gallery'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Welcome />
       <Choose />
+      <Gallery />
       <StickyCols />
     </div>
   )
