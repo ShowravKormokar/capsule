@@ -21,7 +21,7 @@ body {
 
 
 /* ----------------- Preloader Styles ---------------- */
-.preloader-progress,
+/* .preloader-progress,
 .preloader-mask,
 .preloader-content {
 	position: fixed;
@@ -56,11 +56,9 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	/* width: 100%; */
 	text-align: center;
 	mix-blend-mode: difference;
 	z-index: 2;
-	/* overflow: hidden; */
 }
 
 .preloader-logo .logo-text {
@@ -69,7 +67,6 @@ body {
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1;
-	/* overflow: hidden; */
 }
 
 .preloader-mask {
@@ -117,7 +114,7 @@ body {
 	will-change: transform;
 	overflow: hidden;
 
-}
+} */
 
 /* Glassmorphism card effect */
 .glassEffect {
