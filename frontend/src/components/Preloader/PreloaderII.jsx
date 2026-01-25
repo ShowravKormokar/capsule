@@ -122,7 +122,7 @@ export default function PreloaderII() {
     }, []);
 
     return (
-        <div className="size-full relative z-51">
+        <div className="size-full fixed z-51 overflow-hidden pointer-events-none">
             <div className="preloader-progress">
                 <div className="preloader-progress-bar"></div>
                 <div className="preloader-logo">
@@ -134,12 +134,12 @@ export default function PreloaderII() {
 
             <div className="preloader-content">
                 <div className="preloader-footer">
-                    <p>
-                        Spaces unfold in light and shadow, where structure finds its quite
-                        rhythm, and time align in harmony
+                    <p className="text-sm">
+                        Meet Capsules®—modern and cozy<br />
+                        houses, in the California desert.
                     </p>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

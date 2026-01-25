@@ -41,8 +41,8 @@
 .preloader-logo h1 {
     position: relative;
     color: var(--base-300);
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 3.5rem;
+    font-weight: 600;
     line-height: 1;
 }
 
@@ -50,7 +50,7 @@
     background-color: var(--base-100);
     mask:
         linear-gradient(var(--base-300), var(--base-300)),
-        url("../../../public/preloader-bg.svg") center/50% no-repeat;
+        url("../../../public/preloader-bg.svg") center/40% no-repeat;
     mask-composite: subtract;
     will-change: transform;
     z-index: 1;
