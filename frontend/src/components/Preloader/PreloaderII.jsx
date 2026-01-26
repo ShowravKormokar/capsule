@@ -84,14 +84,14 @@ export default function PreloaderII() {
                     duration: 1,
                     ease: "power4.inOut",
                 },
-                "-=0.5"
+                "+=0.15"
             )
             .to(splits.footerLines.lines, {
                 y: "-100%",
                 stagger: 0.1,
-                duration: 1,
+                duration: 0.5,
                 ease: "power4.inOut",
-            })
+            }, "-=0.1")
             .to(
                 ".preloader-progress",
                 {
@@ -99,13 +99,13 @@ export default function PreloaderII() {
                     duration: 0.7,
                     ease: "power3.out",
                 },
-                "-=0.25"
+                "<"
             )
             .to(
                 ".preloader-mask",
                 {
-                    scale: 5,
-                    duration: 5,
+                    scale: 6,
+                    duration: 4,
                     ease: "power3.out",
                 },
                 "<"
