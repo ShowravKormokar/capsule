@@ -6,6 +6,7 @@ import StickyCols from '../../components/StickyCols/StickyCols'
 import Gallery from '../../components/Gallery/Gallery'
 import MarqueeText from '../../components/Marquee/MarqueeText'
 import MarqueeSticky from '../../components/Layouts/MarqueeSticky'
+import MapLink from '../../components/MapLink/MapLink'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Welcome />
             <Choose />
             <Gallery />
+            <MapLink/>
             <MarqueeSticky />
             <StickyCols />
         </div >
