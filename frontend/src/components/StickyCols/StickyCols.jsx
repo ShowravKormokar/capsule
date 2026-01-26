@@ -32,7 +32,7 @@ const StickyCols = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".sticky-cols",
-                start: "top top",
+                start: "top 20%",
                 end: "+=90%",
                 pin: true,
                 scrub: 1,
@@ -74,7 +74,7 @@ const StickyCols = () => {
     });
 
     return (
-        <section className="sticky-cols w-screen overflow-hidden">
+        <section className="sticky-cols w-screen h-dvh overflow-hidden bg-[#181717]">
             <div className="sticky-cols-wrapper relative w-full h-screen">
                 <div className="col col-1">
                     <div className="col-content">

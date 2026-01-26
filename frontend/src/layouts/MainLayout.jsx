@@ -15,13 +15,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const MainLayout = () => {
 
-    // useEffect(() => {
-    //     const lenis = initLenis();
-    //     return () => {
-    //         lenis.destroy(); // cleanup on unmount
-    //     };
-    // }, []);
-
     useGSAP(() => {
         ScrollSmoother.create({
             wrapper: "#smooth-wrapper",
@@ -33,7 +26,6 @@ const MainLayout = () => {
 
     return (
         <>
-            {/* <Preloader /> */}
             <PreloaderII />
             <Logo />
             <ReserveBtn />

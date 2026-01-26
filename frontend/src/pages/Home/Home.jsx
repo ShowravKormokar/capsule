@@ -5,23 +5,19 @@ import Choose from '../../components/Choose/Choose'
 import StickyCols from '../../components/StickyCols/StickyCols'
 import Gallery from '../../components/Gallery/Gallery'
 import MarqueeText from '../../components/Marquee/MarqueeText'
+import MarqueeSticky from '../../components/Layouts/MarqueeSticky'
 
 const Home = () => {
-  return (
-    <div>
-      <Hero />
-      <Welcome />
-      <Choose />
-      <Gallery />
-      <section>
-        <div className='marquee-overlap pl-8'>
-          <p className='text-[.7rem] text-[#eae5dd] choose-subtitle'>Want to learn more about<br /> the benefits of—Capsules<span>®</span>?</p>
-        </div>
-        <MarqueeText />
-        <StickyCols />
-      </section>
-    </div >
-  )
+    return (
+        <div>
+            <Hero />
+            <Welcome />
+            <Choose />
+            <Gallery />
+            <MarqueeSticky />
+            <StickyCols />
+        </div >
+    )
 }
 
 export default Home
