@@ -2,7 +2,7 @@ import React from 'react'
 
 const MapLink = () => {
     return (
-        <section className="w-screen h-dvh bg-[#181717] flex justify-center items-center text-center">
+        <section className="w-screen h-[90vh] bg-[#181717] flex justify-center items-center text-center">
             <div className=''>
                 <p className="text-[0.7rem] font-bold text-[#a79c8d] choose-subtitle">
                     Closer than you think

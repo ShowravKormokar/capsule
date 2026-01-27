@@ -21,7 +21,7 @@ const Gallery = () => {
         const tl4 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".gallery-page4",
-                start: "30% 30%",
+                start: "10% 10%",
                 end: "220% 30%",
                 scrub: 1,
                 pin: true,
@@ -109,7 +109,7 @@ const Gallery = () => {
     };
 
     return (
-        <section className="gallery-page4 " ref={pageRef}>
+        <section className="gallery-page4" ref={pageRef}>
             <div className="gallery-slider">
                 <div
                     className="gallery-box"
