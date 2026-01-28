@@ -15,7 +15,7 @@ const Home = () => {
             <Welcome />
             <Choose />
             <Gallery />
-            <MapLink/>
+            <MapLink />
             <MarqueeSticky />
             <StickyCols />
         </div >
