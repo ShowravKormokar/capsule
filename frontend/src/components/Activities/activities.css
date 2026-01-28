@@ -1,0 +1,35 @@
+/* -------------- Activities Section Styles ----------------- */
+.activities-section {
+    background: linear-gradient(to bottom,
+            #181717 0%,
+            #181717 50%,
+            #1f1d1b 65%,
+            #1f1d1b 75%,
+            #1f1d1b 85%,
+            #1f1d1b 90%,
+            /* #241f1d 95%, */
+            #2b2825 100%);
+}
+
+.activities-title-break {
+    color: #181717;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.activities-title-clip {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #f4efe7;
+    clip-path: inset(100% 0 0 0);
+    white-space: wrap;
+    transition: none;
+    z-index: 100;
+}
+
+.activities-part {
+    overflow: hidden;
+}
