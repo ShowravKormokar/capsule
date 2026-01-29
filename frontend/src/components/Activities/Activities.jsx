@@ -59,7 +59,7 @@ const Activities = () => {
             }, "<");
         }
 
-        activitiesTl.to(".progress-line", { delay: 1.5 });
+        activitiesTl.to(".progress-line", { delay: 2.5 });
 
         // Animate Easy progress line from 0% to 40%
         activitiesTl.fromTo(progressLines[0],
@@ -102,14 +102,14 @@ const Activities = () => {
                     <div className="lg:w-[30%] w-[60%]">
                         <p className="text-[.7rem] text-[#eae5dd] text-nowrap">Offered Capsules® activities have different levels of difficulty:</p>
                     </div>
-                    <div className="flex flex-col justify-start items-start gap-8 mt-8">
+                    <div className="flex flex-col justify-start items-start gap-5 mt-8 mr-14">
                         <div className="w-full mr-14">
                             <div className="flex justify-between w-full mb-4">
                                 <h1 className="text-[#b1a696] text-xl">Easy</h1>
                                 <p className="text-[#b1a696] text-[0.7rem]">3-5h duration</p>
                             </div>
                             <div className="relative z-9 w-full h-[0.1rem] bg-[#4f4b48]">
-                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[40%] h-[0.15rem] top-1/2 -translate-y-1/2 left-0"></div>
+                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[40%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
                             </div>
                         </div>
                         <div className="w-full mr-14">
@@ -118,7 +118,7 @@ const Activities = () => {
                                 <p className="text-[#b1a696] text-[0.7rem]">8-12h duration</p>
                             </div>
                             <div className="relative z-9 w-full h-[0.1rem] bg-[#4f4b48]">
-                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[80%] h-[0.15rem] top-1/2 -translate-y-1/2 left-0"></div>
+                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[80%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
                             </div>
                         </div>
                         <div className="w-full mr-14">
@@ -127,12 +127,12 @@ const Activities = () => {
                                 <p className="text-[#b1a696] text-[0.7rem]">24h duration</p>
                             </div>
                             <div className="relative z-9 w-full h-[0.1rem] bg-[#4f4b48]">
-                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[60%] h-[0.15rem] top-1/2 -translate-y-1/2 left-0"></div>
+                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[60%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='lg:w-1/2 w-full text-[#b1a696] lg:text-[2rem] text-[1rem] md:leading-[1.1] lg:mt-0 mt-8 lg:pr-10'>
+                <div className='lg:w-1/2 w-full text-[#b1a696] lg:text-[2rem] text-[1rem] md:leading-[1.1] lg:mt-0 mt-8 lg:pr-0'>
                     <p>We want to make sure your stay is exciting and enjoyable. That’s why we offer a variety of activities with different levels of engagement. Whether you seek
                         thrills or tranquility, there’s something for everyone to make your desert stay truly memorable.</p>
                 </div>
