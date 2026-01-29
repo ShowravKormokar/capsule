@@ -18,8 +18,8 @@ const Activities = () => {
         const activitiesTl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".activities-section",
-                start: "top 100%",
-                end: "bottom 130%",
+                start: "top 80%",
+                end: "top 20%",
                 scrub: true,
                 // markers: true,
             },
@@ -59,31 +59,31 @@ const Activities = () => {
             }, "<");
         }
 
-        activitiesTl.to(".progress-line", { delay: 2.5 });
+        // activitiesTl.to(".progress-line", { delay: 2.5 });
 
         // Animate Easy progress line from 0% to 40%
         activitiesTl.fromTo(progressLines[0],
             { width: "0%" },
-            { width: "40%", duration: 1.5, ease: "none" }
+            { width: "40%", duration: 0.5, ease: "power2.in" }
         );
 
         // Animate Medium progress line from 0% to 60%
         activitiesTl.fromTo(progressLines[1],
             { width: "0%" },
-            { width: "80%", duration: 1.5, ease: "none" },
+            { width: "80%", duration: 0.5, ease: "power2.in" },
             "<" // Start at same time as previous
         );
 
         // Animate Hard progress line from 0% to 80%
         activitiesTl.fromTo(progressLines[2],
             { width: "0%" },
-            { width: "60%", duration: 1.5, ease: "none" },
+            { width: "60%", duration: 0.5, ease: "power2.in" },
             "<" // Start at same time as previous
         );
     });
 
     return (
-        <section className="activities-section w-full h-[120vh] p-8 pt-16">
+        <section className="activities-section w-full h-[120vh] p-8 mt-16">
             <p className='text-[.7rem] font-bold text-[#eae5dd] activities-subtitle'>Ready for an advanture?</p>
             <div className="lg:mt-10 mt-7 activities-part origin-bottom">
                 {activitiesLines.map((line, index) => (

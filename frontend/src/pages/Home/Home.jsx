@@ -8,6 +8,7 @@ import MarqueeText from '../../components/Marquee/MarqueeText'
 import MarqueeSticky from '../../components/Layouts/MarqueeSticky'
 import MapLink from '../../components/MapLink/MapLink'
 import Activities from '../../components/Activities/Activities'
+import Showcase from '../../components/Showcase/Showcase'
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <MarqueeSticky />
             <StickyCols />
             <Activities />
+            <Showcase />
         </div >
     )
 }

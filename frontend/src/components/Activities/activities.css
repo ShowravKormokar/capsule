@@ -1,15 +1,5 @@
 /* -------------- Activities Section Styles ----------------- */
-.activities-section {
-    background: linear-gradient(to bottom,
-            #181717 0%,
-            #181717 50%,
-            #1f1d1b 65%,
-            #1f1d1b 75%,
-            #1f1d1b 85%,
-            #1f1d1b 90%,
-            /* #241f1d 95%, */
-            #2b2825 100%);
-}
+
 
 .activities-title-break {
     color: #181717;
