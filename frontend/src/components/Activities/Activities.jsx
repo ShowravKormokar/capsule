@@ -83,7 +83,7 @@ const Activities = () => {
     });
 
     return (
-        <section className="activities-section w-full h-[110vh] p-8 pt-16">
+        <section className="activities-section w-full h-[120vh] p-8 pt-16">
             <p className='text-[.7rem] font-bold text-[#eae5dd] activities-subtitle'>Ready for an advanture?</p>
             <div className="lg:mt-10 mt-7 activities-part origin-bottom">
                 {activitiesLines.map((line, index) => (
