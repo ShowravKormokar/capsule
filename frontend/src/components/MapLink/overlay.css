@@ -8,8 +8,8 @@
     opacity: 0;
     transition: opacity 0.15s ease;
     white-space: nowrap;
-    top: 0;
-    left: 0;
+    top: -20%;
+    left: -20%;
     transform: translateZ(0);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

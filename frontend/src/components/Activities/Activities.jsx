@@ -13,6 +13,7 @@ const Activities = () => {
 
     useGSAP(() => {
         const lines = gsap.utils.toArray(".activities-title-clip");
+        const progressLines = gsap.utils.toArray(".progress-line");
 
         const activitiesTl = gsap.timeline({
             scrollTrigger: {
@@ -20,7 +21,7 @@ const Activities = () => {
                 start: "top 100%",
                 end: "bottom 130%",
                 scrub: true,
-                markers: true,
+                // markers: true,
             },
         });
 
@@ -57,6 +58,28 @@ const Activities = () => {
                 duration: 1,
             }, "<");
         }
+
+        activitiesTl.to(".progress-line", { delay: 1.5 });
+
+        // Animate Easy progress line from 0% to 40%
+        activitiesTl.fromTo(progressLines[0],
+            { width: "0%" },
+            { width: "40%", duration: 1.5, ease: "none" }
+        );
+
+        // Animate Medium progress line from 0% to 60%
+        activitiesTl.fromTo(progressLines[1],
+            { width: "0%" },
+            { width: "80%", duration: 1.5, ease: "none" },
+            "<" // Start at same time as previous
+        );
+
+        // Animate Hard progress line from 0% to 80%
+        activitiesTl.fromTo(progressLines[2],
+            { width: "0%" },
+            { width: "60%", duration: 1.5, ease: "none" },
+            "<" // Start at same time as previous
+        );
     });
 
     return (
@@ -77,27 +100,35 @@ const Activities = () => {
             <div className="activities-sec w-full flex lg:flex-row flex-col justify-center items-start gap-10 lg:mt-0">
                 <div className='lg:w-1/2 w-full'>
                     <div className="lg:w-[30%] w-[60%]">
-                        <p className="text-[.7rem] text-[#eae5dd]">All Capsules® houses—has built
-                            based on the same rules:</p>
+                        <p className="text-[.7rem] text-[#eae5dd] text-nowrap">Offered Capsules® activities have different levels of difficulty:</p>
                     </div>
-                    <div className="flex flex-1 flex-wrap justify-start items-start gap-2 mt-8">
-                        <div className="border-[1px] border-[#b1a696] text-[#b1a696] lg:text-[2rem] px-[20px] py-[4px] rounded-full">
-                            Sustainable
+                    <div className="flex flex-col justify-start items-start gap-8 mt-8">
+                        <div className="w-full mr-14">
+                            <div className="flex justify-between w-full mb-4">
+                                <h1 className="text-[#b1a696] text-xl">Easy</h1>
+                                <p className="text-[#b1a696] text-[0.7rem]">3-5h duration</p>
+                            </div>
+                            <div className="relative z-9 w-full h-[0.1rem] bg-[#4f4b48]">
+                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[40%] h-[0.15rem] top-1/2 -translate-y-1/2 left-0"></div>
+                            </div>
                         </div>
-                        <div className="border-[1px] border-[#f4efe7] text-[#f4efe7] lg:text-[2rem] px-[20px] py-[4px] rounded-full">
-                            Nature—Care
+                        <div className="w-full mr-14">
+                            <div className="flex justify-between w-full mb-4">
+                                <h1 className="text-[#b1a696] text-xl">Medium</h1>
+                                <p className="text-[#b1a696] text-[0.7rem]">8-12h duration</p>
+                            </div>
+                            <div className="relative z-9 w-full h-[0.1rem] bg-[#4f4b48]">
+                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[80%] h-[0.15rem] top-1/2 -translate-y-1/2 left-0"></div>
+                            </div>
                         </div>
-                        <div className="border-[1px] border-[#b1a696] text-[#b1a696] lg:text-[2rem] px-[20px] py-[4px] rounded-full">
-                            Smart
-                        </div>
-                        <div className="border-[1px] border-[#f4efe7] text-[#f4efe7] lg:text-[2rem] px-[20px] py-[4px] rounded-full">
-                            Privacy
-                        </div>
-                        <div className="border-[1px] border-[#b1a696] text-[#b1a696] lg:text-[2rem] px-[20px] py-[4px] rounded-full">
-                            Spacious
-                        </div>
-                        <div className="border-[1px] border-[#f4efe7] text-[#f4efe7] lg:text-[2rem] px-[20px] py-[4px] rounded-full">
-                            Glassed-in
+                        <div className="w-full mr-14">
+                            <div className="flex justify-between w-full mb-4">
+                                <h1 className="text-[#b1a696] text-xl">Hard</h1>
+                                <p className="text-[#b1a696] text-[0.7rem]">24h duration</p>
+                            </div>
+                            <div className="relative z-9 w-full h-[0.1rem] bg-[#4f4b48]">
+                                <div className="progress-line absolute z-10 bg-[#f4efe7] w-[60%] h-[0.15rem] top-1/2 -translate-y-1/2 left-0"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -33,3 +33,10 @@
 .activities-part {
     overflow: hidden;
 }
+
+.progress-line {
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-72%, -50%); */
+    border-radius: 10px;
+}
