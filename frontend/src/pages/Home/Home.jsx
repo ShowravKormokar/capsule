@@ -9,6 +9,7 @@ import MarqueeSticky from '../../components/Layouts/MarqueeSticky'
 import MapLink from '../../components/MapLink/MapLink'
 import Activities from '../../components/Activities/Activities'
 import Showcase from '../../components/Showcase/Showcase'
+import Feedback from '../../components/Feedback/Feedback'
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <StickyCols />
             <Activities />
             <Showcase />
+            <Feedback />
         </div >
     )
 }
