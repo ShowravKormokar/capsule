@@ -10,7 +10,7 @@ import MapLink from '../../components/MapLink/MapLink'
 import Activities from '../../components/Activities/Activities'
 import Showcase from '../../components/Showcase/Showcase'
 import Feedback from '../../components/Feedback/Feedback'
-import FooterBanner from '../../components/FooterBanner/footerBanner'
+import FooterBanner from '../../components/FooterBanner/FooterBanner'
 
 const Home = () => {
     return (
