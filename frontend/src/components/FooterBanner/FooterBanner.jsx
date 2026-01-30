@@ -1,11 +1,12 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import banner from '../../assets/background3.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import ClickIndicator from '../MapLink/ClickIndicator';
 
 
 const FooterBanner = () => {
-
+    const [active, setActive] = useState(false);
     const fbConRef = useRef(null);
     const fbImgRef = useRef(null);
 
@@ -34,7 +35,11 @@ const FooterBanner = () => {
     return (
         < div ref={fbConRef} className="w-screen h-dvh p-2 overflow-hidden" >
             <div className='w-full relative overflow-hidden rounded-4xl'>
-                <img ref={fbImgRef} src={banner} alt="" className='w-full h-full object-cover' />
+                <ClickIndicator active={active} />
+                <img
+                    onMouseEnter={() => setActive(true)}
+                    onMouseLeave={() => setActive(false)}
+                    ref={fbImgRef} src={banner} alt="" className='w-full h-full object-cover' />
 
                 <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10vw] font-bold text-[#f4efe7]'>Capsules<sub className='text-[5vw]'>®</sub></h1>
                 <div className='absolute bottom-5 px-4 w-full'>
