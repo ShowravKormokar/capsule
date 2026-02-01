@@ -1,6 +1,6 @@
 .footer-title {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -28,7 +28,7 @@
 
 /* Specific styling for the ® symbol */
 .footer-title h1 sub.ftChar {
-    font-size: 0.5em;
+    /* font-size: 0.5em; */
     /* Make ® smaller */
     vertical-align: super;
     bottom: 0;

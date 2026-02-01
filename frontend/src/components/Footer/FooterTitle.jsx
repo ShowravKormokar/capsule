@@ -52,8 +52,8 @@ const FooterTitle = () => {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: ftConRef.current,
-                start: "top 85%",
-                end: "top 70%",
+                start: "top 90%",
+                end: "top 80%",
                 scrub: true,
                 // markers: true
             }
@@ -69,7 +69,7 @@ const FooterTitle = () => {
     }, { scope: ftConRef });
 
     return (
-        <section ref={ftConRef} className='relative z-1 w-screen h-[50vh] border-1 border-t-[#c4c1b9]'>
+        <section ref={ftConRef} className='relative z-1 w-screen h-[40vh] border-1 border-t-[#c4c1b9]'>
             <div className='w-full flex justify-between items-center px-6 mt-8'>
                 <p className='text-[#b1a696] text-[0.7rem]'>
                     Website made by—<a href="#" className='text-[#f2ede5]'>Moyra.co</a>
@@ -83,7 +83,7 @@ const FooterTitle = () => {
             </div>
 
             <div className='footer-title w-full text-center'>
-                <h1 className='text-[15vw] font-bold'>
+                <h1 className='text-[18vw] font-bold'>
                     Capsules<sub>®</sub>
                 </h1>
             </div>
