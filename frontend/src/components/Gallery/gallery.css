@@ -97,7 +97,7 @@
 }
 
 .gallery-bottomText {
-    top: 90%;
+    top: 92%;
 }
 
 .gallery-topText h4,
@@ -118,9 +118,9 @@
 }
 
 .gallery-bottomText h3 {
-    width: 30%;
-    font-size: 1rem;
-    margin-left: 3rem;
+    width: 100%;
+    font-size: 0.8rem;
+    margin-left: 1rem;
 }
 
 /* text animation end */

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './gallery.css';
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 import gbg1 from '../../assets/background1.png';
 import gbg2 from '../../assets/background2.png';
@@ -126,7 +127,13 @@ const Gallery = () => {
                     <h3>(Scroll)</h3>
                 </div>
                 <div className="gallery-bottomText">
-                    <h3>Classic Capsule® boasts refined aesthetics and a modern interior, creating an intimate retreat in a desert landscape</h3>
+                    <div className='w-full flex justify-center items-center gap-0'>
+                        <BsFillPlusCircleFill className='w-8 h-8 text-[#b1a696]' />
+                        <h3>Classic Capsule® boasts refined aesthetics and a modern <br /> interior, creating an intimate retreat in a desert landscape</h3>
+                    </div>
+                    <div className="relative z-9 w-50 h-[0.1rem] bg-[#4f4b48]">
+                        <div className="progress-line absolute z-10 bg-[#f4efe7] w-[33%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
+                    </div>
                 </div>
             </div>
 
@@ -137,8 +144,13 @@ const Gallery = () => {
                     <h3>(Scroll)</h3>
                 </div>
                 <div className="gallery-bottomText">
-                    <h3>Classic Capsule® boasts refined aesthetics and a modern interior, creating an intimate
-                        retreat in a desert landscape</h3>
+                    <div className='w-full flex justify-center items-center gap-0'>
+                        <BsFillPlusCircleFill className='w-8 h-8 text-[#b1a696]' />
+                        <h3>Classic Capsule® boasts refined aesthetics and a modern <br /> interior, creating an intimate retreat in a desert landscape</h3>
+                    </div>
+                    <div className="relative z-9 w-50 h-[0.1rem] bg-[#4f4b48]">
+                        <div className="progress-line absolute z-10 bg-[#f4efe7] w-[67%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
+                    </div>
                 </div>
             </div>
 
@@ -149,8 +161,13 @@ const Gallery = () => {
                     <h3>(Scroll)</h3>
                 </div>
                 <div className="gallery-bottomText">
-                    <h3>Classic Capsule® boasts refined aesthetics and a modern interior, creating an intimate
-                        retreat in a desert landscape</h3>
+                    <div className='w-full flex justify-center items-center gap-0'>
+                        <BsFillPlusCircleFill className='w-8 h-8 text-[#b1a696]' />
+                        <h3>Classic Capsule® boasts refined aesthetics and a modern <br /> interior, creating an intimate retreat in a desert landscape</h3>
+                    </div>
+                    <div className="relative z-9 w-50 h-[0.1rem] bg-[#4f4b48]">
+                        <div className="progress-line absolute z-10 bg-[#f4efe7] w-[100%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
+                    </div>
                 </div>
             </div>
         </section>
