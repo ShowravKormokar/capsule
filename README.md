@@ -3,7 +3,7 @@
 ![Capsule Showcase](https://raw.githubusercontent.com/ShowravKormokar/capsule/refs/heads/main/frontend/src/assets/showcase-img.png)
 
 
-> ⚠️ **This Website Is Still Under Construction**
+# > ⚠️ **This Website Is Still Under Construction. Not fully responsive yet. Try to see in desktop mode (1200px to 1900px width). Thanks🚨☠️**
 
 A faithful React.js clone of the **"awwwards"** ([Awwwards.com](https://www.awwwards.com/sites/capsules-r)) SOTD-winning **"Capsule"** website by Moyra ([capsule.moyra.co](https://capsule.moyra.co)), which won Awwwards Site of the Day. This project was built for learning purposes to master advanced frontend techniques like scroll-triggered animations, smooth page transitions, and responsive design.
 - React Vite (version: 19.1.0)
